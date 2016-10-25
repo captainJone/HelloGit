@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 内容生成&计数器 </title>
+  <meta charset="utf-8">
+	<style>
+		/*1、声明(复位)计数器*/
+		#d1{
+			counter-reset:c1;
+		}
+		/*2、声明计数器的增量*/
+		#d1 p{
+			counter-increment:c1;
+		}
+		/*3、使用计数器*/
+		#d1 p:before{
+			content:counter(c1)"、";
+			font-weight:bold;
+			color:#f00;
+		}
+	</style>
+ </head>
+
+ <body>
+  <div id="d1">
+		<p>两只黄鹂鸣翠柳</p>
+		<p>一行白鹭上西天</p>
+		<p>借问酒家何处有</p>
+		<p>牧童遥指杏花村</p>
+	</div>
+ </body>
+</html>
